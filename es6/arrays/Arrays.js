@@ -62,3 +62,7 @@
 /**
  * Array.join() is basically mkString
  */
+
+/*
+ * Suggestion: Don't use for..in to iterate over arrays
+ */
