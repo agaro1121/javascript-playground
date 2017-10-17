@@ -71,3 +71,15 @@ const updateBruce1949 = update.bind(bruce, 1949);
 updateBruce1949("singer, songwriter");
 // bruce is now { name: "Bruce", birthYear: 1949,
 //    occupation: "singer, songwriter" }
+
+// return function from a function
+// function sum(arr, f) {
+// if no function is supplied, use a "null function" that // simply returns its argument unmodified
+function sum(arr, f) {
+	if(typeof f != 'function') f = x => x;
+	return arr.reduce((a, x) => a += f(x), 0); 
+}
+
+function newSummer(f) {
+	return arr => sum(arr, f);
+}
