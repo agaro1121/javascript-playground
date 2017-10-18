@@ -74,3 +74,15 @@ promise.then(function () {
 
 console.log('This is the last line of the script'); // 2nd Statement
 
+/**
+ * Parallel Execution:
+ * 	- easy as mapping over an array and making async calls for each item
+ *
+ * Serial Execution:
+ * 	- things like `reduce` or recursion
+ */
+
+/**
+ * You can set promist timeouts by sticking
+ * resolve and reject functions in `setTimeout()`
+ */
