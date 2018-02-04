@@ -23,3 +23,10 @@
 `npm install --save-dev mocha`
 `mocha -R spec fileName`
 `mocha -R landing fileName`
+add entry to package.json -> 
+```json
+"scripts": {
+    "test": "mocha es6/pluralsight/intro2node/testing/mocha.js"
+  }
+```
+now you can run with `npm run test`
