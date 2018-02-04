@@ -1,0 +1,1 @@
+This is a file from disk being piped to response!
