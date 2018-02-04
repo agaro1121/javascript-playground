@@ -18,3 +18,8 @@
 # ESLint
 `npm install -g eslint`
 `npm install --save-dev gulp-eslint`
+
+# Mocha
+`npm install --save-dev mocha`
+`mocha -R spec fileName`
+`mocha -R landing fileName`
