@@ -36,6 +36,19 @@ bookRouter.use('/books/:bookId', (req, res, next) => {
 
 /*
 * Simple get with url param
+*
+* Put the `bookRouter` in a separate file next time
+* Also, wrap the above middleware in 'celebrate'
+* https://www.npmjs.com/package/celebrate
+* to be passed into the route directly
+* something like:
+* bookRouter.get('/path/to/route',
+*   callToParam(..args),
+*   controller.get <- this looks like: controller.get((req, res) => {})
+*   );
+*
+*
+*
 * */
 bookRouter.route('/books/:bookId')
     .get((req, res) => {
