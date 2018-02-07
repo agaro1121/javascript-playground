@@ -1,5 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const BookController = require('./controllers/BookController');
+const bookController = BookController();
 
 const app = express();
 
@@ -14,17 +16,8 @@ const bookRouter = express.Router();
 * Simple get with query string
 * */
 bookRouter.route('/books')
-    .post((req, res) => {
-        res.status(201).json(req.body);
-    })
-    .get((req, res) => {
-        const query = req.query; //query string - { genre: 'Fiction' }
-        console.log(query);
-        const responseJson = {
-            hello: "This my book api!"
-        };
-        res.json(responseJson);
-    });
+    .post(bookController.post)
+    .get(bookController.get);
 
 /*
 * middleware
@@ -91,3 +84,5 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
     console.log(`Gulp is Running on port ${port}`);
 });
+
+module.exports = app;
