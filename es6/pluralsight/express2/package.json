@@ -1,0 +1,11 @@
+{
+  "name": "express2",
+  "version": "0.1.0",
+  "description": "Setting up Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Anthony Garo",
+  "license": "ISC"
+}
