@@ -19,6 +19,16 @@ const router = () => {
         });
 
     authRouter.route('/profile')
+        /*
+        * Checks if a user is logged in
+        * so no one can get to this route
+        * */
+        .all((req, res, next) => {
+            if(!req.user) {
+                res.redirect('/');
+            }
+            next();
+        })
         .get((req, res) => {
             console.log('json=',req.user);
             res.json(req.user);
